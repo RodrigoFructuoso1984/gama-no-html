@@ -1,1 +1,1 @@
-Está curso sobre HTML da Gama Academy faz parte do programa Hiring Coders.
+Este é o curso HTML da Gama Academy, que faz parte do programa Hiring Coders.
