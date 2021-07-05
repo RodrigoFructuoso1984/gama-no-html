@@ -179,7 +179,7 @@
         <section>
             <h1>ETEC</h1>
 
-            <p>A Escola Técnica Estadual (ETEC) é um programa governamental que objetiva a formação de profissões de nível técnico.
+            <p id="article-description">A Escola Técnica Estadual (ETEC) é um programa governamental que objetiva a formação de profissões de nível técnico.
             Logo, se você já terminou ou está terminando o ensino médio,
             ela surge como opção para buscar melhores condições de vida, 
             mas será que realmente vale a pena?</p>
@@ -237,6 +237,11 @@
 
         </form>
     
+        <script type="text/javascript">//DOM metodos
+            var paragrafo = document.getElementById("article-description");
+            paragrafo.style.color = "red";
+            paragrafo.innerText = "ETEC";
+        </script>
     </main>
     <!--Fim do conteudo principal-->
 
