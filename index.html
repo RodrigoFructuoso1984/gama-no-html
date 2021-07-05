@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"><!--acessibilidade-->
 <head>
     
     <title>Página para Exercícios HTML</title><!--Título da página-->
@@ -35,37 +35,58 @@
 
 <body>
     <!--Inicio do cabecalho-->
-    <header>
+    <header role="banner"><!--acessibilidade landmarks-->
         <!--Inserindo imagem-->
         <img src="logoEtec.jpg" alt="Logo Etec" title="Logo Etec"/>
+
+        <nav role="navigation" aria-level="main navigation"><!--acessibilidade landmarks-->
+            <ul role="menu"><!--acessibilidade landmarks-->
+                <li>
+                    <a href="#" role="menuitem">Home</a><!--acessibilidade landmarks-->
+                </li>
+                <li>
+                    <a href="#" role="menuitem">Quem Somos</a><!--acessibilidade landmarks-->
+                </li>
+                <li>
+                    <a href="#" role="menuitem">Contato</a><!--acessibilidade landmarks-->
+                </li>
+                <li>
+                    <a href="#" role="menuitem">Conteúdos</a><!--acessibilidade landmarks-->
+                </li>
+            </ul>
+        </nav>
     </header>  
     <!--Fim do cabecalho-->  
     
     <!--Conteudo principal-->
-    <main>
+    <main role="main"><!--acessibilidade landmarks-->
         <!--Titulos-->
         <h1>Terra</h1>
-        <p>Lorem <strong>ipsum</strong> dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo-->
+        <p lang="en">Lorem <strong>ipsum</strong> dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo--><!--acessibilidade-->
         <!--strong dar enfase na palavra, deixa em negrito-->
 
         <h2>América do Sul</h2>
-        <p><span>Lorem ipsum</span> dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo-->
+        <p lang="en"><span>Lorem ipsum</span> dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo--><!--acessibilidade-->
         <!--span bloco de texto sem semantica-->
 
         <h3>Brasil</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo-->
+        <p lang="en">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo--><!--acessibilidade-->
 
         <h4>São Paulo</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo-->
+        <p lang="en">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo--><!--acessibilidade-->
 
         <h5>Campinas</h5>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo-->
+        <p lang="en">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo--><!--acessibilidade-->
 
         <h6>Formosa</h6>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo-->
+        <p lang="en">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta nesciunt ea ducimus, explicabo adipisci sequi eligendi beatae ab vitae provident aliquid dolorum voluptate dolor fuga labore natus aut asperiores aperiam!</p><!--Paragrafo--><!--acessibilidade-->
 
         <!--Imagens-->
-        <img src="https://poltronanerd.com.br/wp-content/uploads/2020/04/baby-yoda.jpg" alt="Baby Yoda" title="Baby Yoda"/>
+        <img src="https://poltronanerd.com.br/wp-content/uploads/2020/04/baby-yoda.jpg" alt="Baby Yoda" title="Baby Yoda" aria-labelledby="description-babyyoda"/><!--acessibilidade-->
+        <p id="description-babyyoda"><!--acessibilidade-->
+            Ele é uma membro pequeno da mesma especie alienigena sem nome dos personagens
+            de Star Wars Yoda e Yaddle, com quem ele compartilha uma forte habilidade.           
+        </p>
         
         <!--Links HTML-->
         <a href="https://www.google.com/" title="Site do Google" target="_blank">
@@ -104,14 +125,15 @@
         </dl>
         
         <!--Tabelas-->
-        <table>
+        <table summary="Atividades desempenhadas ao longo do ano">
+            <caption>Tabela 1 - Roteiro de Atividades</caption><!--acessibilidade-->
             <!--cabecalho tabela-->
             <thead>
                 <!--Linha tabela-->
                 <tr>
                     <!--Coluna tabela-->
-                    <th>Mes da atividade</th>
-                    <th>Nome atividade</th>
+                    <th abbr="Mes" scope="col">Mes da atividade</th><!--acessibilidade-->
+                    <th abbr="Nome" scope="col">Nome atividade</th><!--acessibilidade-->
                 </tr>
             </thead>
 
@@ -120,24 +142,24 @@
                 <!--linha da tabela-->
                 <tr>
                     <!--Conteudo da coluna-->
-                    <td colspan="2">Janeiro</td><!--mesclar colunas-->
+                    <th colspan="2" scope="row">Janeiro</th><!--mesclar colunas--><!--acessibilidade-->
                     
                 </tr>
                 <!--Linha da tabela-->
                 <tr>
                     <!--Conteudo da coluna-->
-                    <td>Fevereiro</td>
+                    <th scope="row">Fevereiro</th><!--acessibilidade-->
                     <td rowspan="2">Meditacao</td><!--mesclar linhas-->
                 </tr>
                 <!--Linha da tabela-->
                 <tr>
                     <!--Conteudo da coluna-->
-                    <td>Marco</td>
+                    <th scope="row">Marco</th><!--acessibilidade-->
                 </tr>
                 <!--Linha da tabela-->
                 <tr>
                     <!--Conteudo da coluna-->
-                    <td>Abril</td>
+                    <th scope="row">Abril</th><!--acessibilidade-->
                     <td>Natacao</td>
                 </tr>
             </tbody>
@@ -219,8 +241,8 @@
     <!--Fim do conteudo principal-->
 
     <!--Rodape-->
-    <footer>
-
+    <footer role="contentinfo"><!--acessibilidade landmarks-->
+        &copy; 2021 Gama Academy
     </footer>
     <!--Fim do rodape-->
 </body>
