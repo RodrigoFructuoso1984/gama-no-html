@@ -83,10 +83,21 @@
 
         <!--Imagens-->
         <img src="https://poltronanerd.com.br/wp-content/uploads/2020/04/baby-yoda.jpg" alt="Baby Yoda" title="Baby Yoda" aria-labelledby="description-babyyoda"/><!--acessibilidade-->
+        
         <p id="description-babyyoda"><!--acessibilidade-->
             Ele é uma membro pequeno da mesma especie alienigena sem nome dos personagens
             de Star Wars Yoda e Yaddle, com quem ele compartilha uma forte habilidade.           
         </p>
+
+        <button id="botao1" onclick="atualizacao()">Atualizacao de texto</button>
+
+        <!--DOM Eventos-->
+        <script type="text/javascript">
+            function atualizacao(){
+                var texto1 = document.getElementById("description-babyyoda");
+                texto1.innerText = "Star Wars!";
+            }
+        </script>
         
         <!--Links HTML-->
         <a href="https://www.google.com/" title="Site do Google" target="_blank">
